@@ -16,15 +16,21 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body{
+    background: rgb(250, 245, 245);
 }
+
+.banner-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .banner-image:not(:first-child) {
+    opacity: 0;
+  }
 
 @layer utilities {
   .text-balance {
